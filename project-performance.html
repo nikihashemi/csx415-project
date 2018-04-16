@@ -11,7 +11,7 @@
 
 <meta name="author" content="Niki Hashemi" />
 
-<meta name="date" content="2018-04-13" />
+<meta name="date" content="2018-04-15" />
 
 <title>Kickstarter Project Performance</title>
 
@@ -121,7 +121,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Kickstarter Project Performance</h1>
 <h4 class="author"><em>Niki Hashemi</em></h4>
-<h4 class="date"><em>April 13, 2018</em></h4>
+<h4 class="date"><em>April 15, 2018</em></h4>
 
 </div>
 
@@ -129,6 +129,15 @@ $(document).ready(function () {
 <div id="project-performance" class="section level2">
 <h2>Project Performance</h2>
 <p>This document will go into detail about the Kickstarter Project Performance.</p>
+</div>
+<div id="update-from-15-april-2018" class="section level2">
+<h2>Update from 15-April-2018</h2>
+<p>I have performed some data cleaning and run some preliminary exploratory data analysis on the Kickstarter data set. In my initial analysis, I created some bar graphs to get a better sense of the data. These graphs can be found in the graphs folder in the KickstarterProject folder.</p>
+<p>I also ran an initial model to test my dataset. The model is a simple linear regression model. The outcome variable (y) is the amount of money that was pledged in the kickstarter campaign. The dependent variables (x) that I used in the preliminary model was the number of backers that contributed to the Kickstarter campaigns.</p>
+<p>Pledged = intercept + backers*(x)</p>
+<p>First linear regression model: total pledge amount = 1088.4658 + 75.46353*Number of Backers</p>
+<p>The p-value was &lt; 0.01 which means that the number of backers has a significant affect on the total pledge amount. The slope is ~75 which means that each individual on kickstarter contributed an average of $75.</p>
+<p>Next steps: Divide the data into a training (2016 dataset) and test (2018 dataset) datasets to put the model to the test. The goal for this project is to be able to closely predict the amount of money that will be pledged to the product during the Kickstarter campaign based on various dependent variables in the dataset.</p>
 </div>
 
 
