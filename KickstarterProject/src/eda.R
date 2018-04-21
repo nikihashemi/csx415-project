@@ -64,12 +64,12 @@ train$pledged[train$pledged == 0] <- 1
 train$backers[train$backers == 0] <- 1
 lm.result <- lm(log(train$pledged) ~ log(train$backers), data = train) 
 summary(lm.result)
-#First model: pledged amount = 1.92 + 1.526*backers
+#First model: log(pledged amount) = 1.92 + 1.526*log(backers)
 
 #Testing naive model on test dataset
 dist.predict <- predict(lm.result, test)
 actuals_preds <- data.frame(cbind(actuals = log(train$pledged), predicteds=dist.predict))
 correlation_accuracy <- cor(actuals_preds)
-min_max_accuracy <- mean(apply(actuals_preds, 1, min) / apply(actuals_preds, 1, max))  
+min_max_accuracy <- mean(apply(actuals_preds, 1, min) / apply(actuals_preds, 1, max))
 
 
