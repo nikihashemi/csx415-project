@@ -1,52 +1,75 @@
-#First Look at dataset
-head(ks.projects.201801)
-summary(ks.projects.201801)
+#First look at training dataset
+head(train)
+summary(train)
 
 
-#First look at categorical variables
+#First look at categorical variables in training dataset
 #Create bar graph for frequency in main_category column limited to the top 15 categories
-cat.freq <- ks.projects.201801 %>% group_by(main_category) %>% summarize(count = n()) %>% arrange(desc(count))
-sm.cat.freq <- cat.freq[1:15,1:2]
-sm.cat.freq.plot <- ggplot(sm.cat.freq, aes(reorder(main_category, -count), count, fill=count)) + geom_bar(stat="identity") + xlab("Project Category") + ylab("Frequency") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5))
-sm.cat.freq.plot
+category.fq <- train %>% group_by(main_category) %>% summarize(count = n()) %>% arrange(desc(count))
+category.fq <- category.fq[1:15,1:2]
+ggplot(category.fq, aes(reorder(main_category, -count), count)) + geom_bar(stat="identity") + xlab("Project Category") + ylab("Frequency") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5))
+
 
 #Create bar graph for frequency in state column
-state.freq <- ks.projects.201801 %>% group_by(state) %>% summarize(count = n()) %>% arrange(desc(count))
-sm.state.freq <- state.freq[1:6,1:2]
-sm.state.freq.plot <- ggplot(sm.state.freq, aes(reorder(state, -count), count, fill=count)) + geom_bar(stat = "identity") + xlab("State") + ylab("Frequency") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5))
-sm.state.freq.plot
+state.fq <- train %>% group_by(state) %>% summarize(count = n()) %>% arrange(desc(count))
+state.fq <- state.fq[1:6,1:2]
+ggplot(state.fq, aes(reorder(state, -count), count)) + geom_bar(stat = "identity") + xlab("State") + ylab("Frequency") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5))
 
 #Look into Film & Video group and break into subcategories
-subcat.freq.fv <- ks.projects.201801 %>% filter(main_category =="Film & Video") %>% group_by(category) %>% summarize(count = n()) %>% arrange(desc(count))
-sm.subcat.freq.fv <- subcat.freq.fv[1:5,1:2]
-sm.subcat.freq.fv.plot <- ggplot(sm.subcat.freq.fv, aes(reorder(category, -count), count, fill = count)) + geom_bar(stat = "identity") + xlab("Film & Video Subcategories") + ylab("Frequency") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
-sm.subcat.freq.fv.plot
+fvsubcat.fq <- train %>% filter(main_category =="Film & Video") %>% group_by(category) %>% summarize(count = n()) %>% arrange(desc(count))
+fvsubcat.fq <- fvsubcat.fq[1:5,1:2]
+ggplot(fvsubcat.fq, aes(reorder(category, -count), count)) + geom_bar(stat = "identity") + xlab("Film & Video Subcategories") + ylab("Frequency") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
+
 
 #Look into Music group and break into subcategories
-subcat.freq.m <- ks.projects.201801 %>% filter(main_category =="Music") %>% group_by(category) %>% summarize(count = n()) %>% arrange(desc(count))
-sm.subcat.freq.m <- subcat.freq.m[1:5,1:2]
-sm.subcat.freq.m.plot <- ggplot(sm.subcat.freq.m, aes(reorder(category, -count), count, fill = count)) + geom_bar(stat = "identity") + xlab("Music Subcategories") + ylab("Frequency") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
-sm.subcat.freq.m.plot
+msubcat.fq <- train %>% filter(main_category =="Music") %>% group_by(category) %>% summarize(count = n()) %>% arrange(desc(count))
+msubcat.fq <- msubcat.fq[1:5,1:2]
+ggplot(msubcat.fq, aes(reorder(category, -count), count)) + geom_bar(stat = "identity") + xlab("Music Subcategories") + ylab("Frequency") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
+
 
 #Look into failed state group and break into subcategories
-failed.freq <- ks.projects.201801 %>% filter(state == "failed") %>% group_by(main_category) %>% summarize(count = n()) %>% arrange(desc(count))
-failed.freq.plot <- ggplot(failed.freq, aes(reorder(main_category, -count), count, fill = count)) + geom_bar(stat = "identity") + xlab("Failed Project Categories") + ylab("Frequency") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
-failed.freq.plot
+failed.fq <- train %>% filter(state == "failed") %>% group_by(main_category) %>% summarize(count = n()) %>% arrange(desc(count))
+ggplot(failed.fq, aes(reorder(main_category, -count), count)) + geom_bar(stat = "identity") + xlab("Failed Project Categories") + ylab("Frequency") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
+
 
 #Look into successful state group and break into subcategories
-success.freq <- ks.projects.201801 %>% filter(state == "successful") %>% group_by(main_category) %>% summarize(count = n()) %>% arrange(desc(count))
-success.freq.plot <- ggplot(success.freq, aes(reorder(main_category, -count), count, fill = count)) + geom_bar(stat = "identity") + xlab("Successful Project Categories") + ylab("Frequency") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
-success.freq.plot
+success.fq <- train %>% filter(state == "successful") %>% group_by(main_category) %>% summarize(count = n()) %>% arrange(desc(count))
+ggplot(success.fq, aes(reorder(main_category, -count), count)) + geom_bar(stat = "identity") + xlab("Successful Project Categories") + ylab("Frequency") + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
+
+#Look into distribution of year for training dataset
+year.fq <- train %>% group_by(year) %>% summarize(count = n()) %>% arrange(desc(count))
+ggplot(year.fq, aes(year,count)) + geom_bar(stat = "identity")
+
+#Histogram of pledged column in training dataset
+hist(train$pledged)
+
+#Histogram of log transformed of pledged column in training dataset
+hist(log(train$pledged))
+
+#Histogram of backers column in training dataset
+hist(train$backers)
+
+#Histogram of log transformed backers in training dataset
+hist(log(train$backers))
+
+#Scatter plot log transformed pledged column vs. transformed backers
+train$pledged[train$pledged == 0] <- 1
+train$backers[train$backers == 0] <- 1
+plot(log(train$backers), log(train$pledged))
+abline(lm(log(train$pledged) ~ log(train$backers)), col = 'red')
 
 
 #First linear model: Naive Model
-lm.result <- lm(ks.projects.201801$usd_pledged_real~ks.projects.201801$backers, data = ks.projects.201801)
+train$pledged[train$pledged == 0] <- 1
+train$backers[train$backers == 0] <- 1
+lm.result <- lm(log(train$pledged) ~ log(train$backers), data = train) 
 summary(lm.result)
-#First model: total pledge amount = 1088.4658 + 75.46353*Number of Backers
-#p-value < 0.01 which means that the number of backers has a significant affect on the total pledge amount. The slope is ~75 which means
-#that each individual on kickstarter contributed an average of $75
+#First model: pledged amount = 1.92 + 1.526*backers
 
-
-
+#Testing naive model on test dataset
+dist.predict <- predict(lm.result, test)
+actuals_preds <- data.frame(cbind(actuals = log(train$pledged), predicteds=dist.predict))
+correlation_accuracy <- cor(actuals_preds)
+min_max_accuracy <- mean(apply(actuals_preds, 1, min) / apply(actuals_preds, 1, max))  
 
 
