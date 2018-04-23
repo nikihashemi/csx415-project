@@ -1,0 +1,20 @@
+---
+title: "model-performance-linear"
+author: "Niki Hashemi"
+date: "April 22, 2018"
+output: html_document
+---
+## Performance of Linear Regression Models
+
+#### Update: 22-April-2018
+
+Linear Regression Model: log(pledged) ~ log(backers) + goal + main_category + year 
+
+    * R-Squared: 0.8509
+    * Adj R-Squared: 0.8509
+    * AIC: 932892.2
+    * BIC: 933092.6
+    * Min-Max Accuracy: 50.33%
+    * Correlation between pledged and backers, goal, main_category and year: 0.2100%
+
+Evaluation: Based on the information above, we can tell that the response variable is not correlated with the dependent variables (0.2100%). The R-Squared and Adjusted R-Squared values are also high (0.8509) meaning that the proportion of variation for pledged amount is highly explained by the number of backers. The AIC (Akaike's Information Criterion) and BIC (Bayesian Information Criterion) are measures of the goodness of fit for the model. AIC and BIC will be a good measure when comparing models. The lower AIC and BIC scores will determine a model that fits the data better. The AIC and BIC scores for this model are much higher than the naive model. A min_max accuracy of 50.33% indicates that the actual and predicted values for pledged amount have similar directional movement. 

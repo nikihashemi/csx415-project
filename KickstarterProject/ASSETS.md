@@ -27,15 +27,17 @@
         * Train_Histogram_LogPledged
     * Scatter plots: located in "graphs" folder
         * Train_Scatter_LogPledged_LogBackers
+    * Tree plots: located in "graphs" folder
+        * Train_RegressionTree
+        * Train_classTree
     
     
 #### Documentation
 
-    * Formal Problem Statement
-    * Model Evaluations (R Markdown Documents)
-        * Linear Models
-        * Tree Models
-    * Overall Project Performance: csx415-projects folder*
-    * Project Proposal (Formal Project Statement)
+    * Model Evaluations (R Markdown Documents): located in "model performance" folder
+        * model-performance-rpart
+        * model-performance-linear
+    * Overall Project Performance: csx415-projects folder
+    * Project Proposal (Formal Problem Statement)
     
 

@@ -1,0 +1,21 @@
+---
+title: "model-performance-rpart"
+author: "Niki Hashemi"
+date: "April 22, 2018"
+output: html_document
+---
+
+## Performance of Tree Models
+
+#### Update: 22-April-2018
+
+#### Classification Tree Model
+
+In the classification model, the response variable was state which has two outcomes: project was successful or the project failed. In the classification tree model. In this model, the variables that were actually used in the tree construction were backers, goal and pledged. From the tree, we can tell that the majority of the Kickstarter projects failed. We can see that the most successful projects had high goal and pledged amounts. 
+
+
+#### Regression Tree Model
+
+The variabls that were actually used in the regression tree model were backers and main_category. The first few nodes of the regression tree model are as follows: for Kickstarter projects that had more than 45,000 backers and were in the games and technology sector had the largest amount of pledged money. However, this accounted for a very small number of projects on the Kickstarter platform. The majority of the projects had less than 276 backers and had a total pledged amount between 3250 and 49000. 
+
+This regression tree model makes sense since there is a strong correlation between pledged amount and the number of backers. 
