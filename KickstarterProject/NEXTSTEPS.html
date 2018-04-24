@@ -121,47 +121,23 @@ $(document).ready(function () {
 </div>
 
 
-<div id="assets-list-updated-23-april-2018" class="section level3">
-<h3>Assets List: Updated 23-April-2018</h3>
-<div id="this-assets-document-will-serve-as-a-list-of-assets-used-during-the-kickstarter-project.-this-list-will-include-inputs-outputs-path-to-the-file-and-a-short-description." class="section level4">
-<h4>This assets document will serve as a list of assets used during the Kickstarter Project. This list will include inputs, outputs, path to the file and a short description.</h4>
-</div>
-<div id="inputs-data-and-code" class="section level4">
-<h4>Inputs: data and code</h4>
-<pre><code>* Data: ks-projects-201612.csv and ks-projects-201801.csv in &quot;data&quot; folder. 
-* Exploratory Data Analysis (EDA): eda.R in &quot;src&quot; folder
-* Naive model: eda.R in &quot;src&quot; folder
-* Code for Linear Regression Models: LinearRegression.R in &quot;src&quot; folder
-* Code for Tree Models: Tree.R in &quot;src&quot; folder</code></pre>
-</div>
-<div id="outputs-plots-visualizations" class="section level4">
-<h4>Outputs: plots, visualizations</h4>
-<pre><code>* Frequency bar graphs: located in &quot;graphs&quot; folder
-    * Train_Frequency_Category: bar graph of the 15 most popular project categories
-    * Train_Frequency_Failed: bar graph of the 15 categories with the most failed projects
-    * Train_Frequency_FilmVideo: bar graph of the film and videos subcategory
-    * Train_Frequency_Music: bar graph of the music subcategory
-    * Train_Frequency_State: bar graph of the state of the project (failed, successful, canceled, etc)
-    * Train_Frequency_Successful: bar graph of the project categories that were most successful
-    * Train_Frequency_Year: bar graph of the number of projects that had a deadline in each year
-* Histograms: located in &quot;graphs&quot; folder
-    * Train_Histogram_Backers: histogram of the number of backers in the train dataset
-    * Train_Histogram_LogBackers: histogram of log(backers) in the train dataset
-    * Train_Histogram_Pledged: histogram of the pledged amount in the train dataset
-    * Train_Histogram_LogPledged: histogram of the log(pledged) amount in the train dataset
-* Scatter plots: located in &quot;graphs&quot; folder
-    * Train_Scatter_LogPledged_LogBackers: scatter plot with linear regression line of log(backers) vs. log(pledged)
-* Tree plots: located in &quot;graphs&quot; folder
-    * Train_RegressionTree: regression tree diagram with number pledged as the response variable
-    * Train_classTree: class tree diagram with the state as the response variable</code></pre>
-</div>
-<div id="documentation" class="section level4">
-<h4>Documentation</h4>
-<pre><code>* Model Evaluations (R Markdown Documents): located in &quot;model performance&quot; folder
-    * model-performance-rpart
-    * model-performance-linear
-* Overall Project Performance: csx415-projects folder
-* Project Proposal (Formal Problem Statement)</code></pre>
+<div id="next-steps" class="section level2">
+<h2>Next Steps</h2>
+<div id="updated-23-april-2018" class="section level4">
+<h4>Updated: 23-April-2018</h4>
+<p>So far, the following steps have been completed:</p>
+<pre><code>1. A Formal Problem Statement was created
+2. Naive model was created and evaluated
+3. Exploratory data analysis was conducted: histograms and bar graphs were created
+4. First linear regression model was created and evaluated
+5. Regression tree was created and evaluated
+6. Classification tree was created and evaluated</code></pre>
+<p>Here are the proposed next steps for the project:</p>
+<pre><code>* Test models on dataset with current 2018 kickstarter projects to provide list of projects with highest potential for success
+* Pull a more current dataset from Kickstarter and add to model creation to see if models change
+* Do a more thorough analysis of the most profitable projects - create model with highly successful projects and compare to current model(s)
+* Look into project names and see if names may have an impact of project success
+* Do some more research into Kickstarter and see if there are any other data points you can pull into the analysis to make it more robust</code></pre>
 </div>
 </div>
 

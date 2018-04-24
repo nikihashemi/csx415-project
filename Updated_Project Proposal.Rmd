@@ -1,0 +1,158 @@
+---
+title: "Kickstarter Implementation Project Proposal"
+client: "Angel Investors Unlimited (AIU)"
+author: "Niki Hashemi- Lead Consulting Analyst for 3D Solutions"
+date: "Updated: 23 April, 2018"
+output: html_document
+---
+
+## Table of Contents
+  + [Project Goals](#project_goals)    
+  + [Background](#background)
+      + [About Us](#about_us)
+      + [How We Can Help](#help)
+      + [Why Kickstarter](#why_kickstarter)
+  + [Project Details](#project_details)
+      + [Project Plan](#plan)
+      + [Project Timeline](#timeline)
+      + [Project Cost](#cost)
+  + [Communication Plan](#communication_plan)
+  + [Project Results](#project_results)
+      + [Success Metric](#success_metric)
+  + [Potential Risks](#potential_risks)
+      + [Major Risks](#major)
+      + [Minor Risks](#minor)
+      + [Risk Mitigation Plan](#mitigation)
+  + [Post Implementation](#post_implementation)
+      + [Model Maintenance](#model_maintenance)
+      + [Revisiting the Model](#revisit)
+  + [Acknowledgements](#acknowledgements)
+
+
+## <a id="project_goals"></a>Project Goals
+
+The goal of this "Kickstarter Implementation Project Proposal" is to successfully identify new companies that Angel Investors Unlimited should create partnerships with. We will create a model that will predict how much money will be pledged to a project on Kickstarter for the duration of the campaign. Our goal at 3D Solutions is to help Angel Investors Unlimited (AIU) find new partnerships through Kickstarter that will ultimately increase their return on investment by 10% annually.  
+
+
+## <a id="background"></a>Background
+
+Angel Investors Unlimited (AIU) is a small investing firm that primarily invests in science and technology related products and ideas. AIU has sought out the professional expertise of 3D Solutions consulting firm to implement a new process to increase the firm's annual return on investment by 20%. After preliminary discussions with AIU, we at 3D Solutions have put a plan together that will achieve the following objectives: 
+
+  + Predict and determine which companies on the Kickstarter platform will have the highest monetary success
+  + Strategically introduce companies from the Kickstarter platform into AIU's portfolio using complex prediction modeling capabilities
+  + Diversify AIU's investment portfolio beyond science and technology related products and ideas
+
+AIU is currently managing $10 million in investment assets from 500 clients and wants to add more breadth and depth to their investment portfolio. AIU's ultimate goal is to keep their clients happy by investing their money in companies, projects and ideas that will be profitable. 
+
+#### <a id = "about_us"></a>About Us
+
+3D Solutions is a consulting firm that helps companies develop solutions to solve their data related problems. 3D stands for "Determine", "Decide", "Design". We first help our clients determine what data related problem they are trying to solve. Next, we work with our clients to decide what the best course of action is needed to create a cohesive solution to their problem. Finally, we design meaningful data platforms and tools that will ensure that our clients have a competitive advantage in their respective industries. 
+
+#### <a id = "help"></a>How We Can Help
+
+3D Solutions has a talented team of Data Scientists with years of experience creating large scale data models. Our Data Scientists are excited to work with AIU's technical and product teams to create a prediction model that will ultimately increase AIU's return on investment by 20% annually. 
+
+#### <a id ="why_kickstarter"></a>Why Kickstarter
+
+Kickstarter is a crowdsourced funding platform for creative projects. Kickstarter has two distinct users: 
+    
+  + Creator - a person, group of people or small company can create a project idea to pitch to the general public
+  + Backer - General public that can put their own money into the kickstarter projects that they like in order to help the project launch
+  
+Each Kickstarter project creator includes the amount of money they need in order to launch their project. The general public can decide to donate a certain amount of money to the projects that they like. 
+
+We at 3D Solutions believe that Kickstarter is the perfect platform for AIU to find companies to create working partnerships with because the Kickstarter platform will allow AIU to see how the general public reacts to a certain product or idea. This is beneficial because buy in from the general public can be a great indication as to whether the product or idea can sustain longterm success and monetary returns. 
+
+
+## <a id="project_details"></a>Project Details
+
+In this section, we will go into detail about the proposed project plan, timeline and costs. 
+
+#### <a id ="plan"></a>Project Plan
+
+The Kickstarter Implementation Project Plan will be broken into four phases: Pre-Model Creation, Model Creation, Training Model, and Implementing Model. 
+
+  1. Pre-Model Creation: Our data scientists at 3D Solutions will meet with the AIU product owner, portfolio manager and techical representative to view the current investment portfolio and earnings statements. This step is essential because this information will give AIU a good background to understand what kinds of companies AIU invests in and how much is generally invested with each company. During this stage, the 3D Solutions data scientists will work with the AIU team to view current data platform capabilities and any current models that AIU uses to track their investments. Open communication and trust during the Pre-Model Creation phase is essential to ensure that 3D Solutions has enough background information to create a model that will work best to achieve AIU's monetary goals. 
+  
+  2. Model Creation: During this stage, the data scientists at 3D solutions will collect data from over 300,000 Kickstarter projects and begin construction on a model that will be able to predict how much money a Kickstarter project will raise in the duration of the campaign.
+  
+  3. Training Model: Next, the 3D Solutions data scientists will train and test the model to make any necessary changes to ensure that the model will most accurately predict the amount of money pledged to a Kickstarter campaign.
+  
+  4. Implementing Model: During this last stage, the 3D Solutions data scientists will work with the AIU technical team to implement the model into existing AIU systems. The 3D Solutions data scientists will also provide any necessary training to the AIU technical teams to ensure the model is performing at its best. 
+
+#### <a id ="timeline"></a>Project Timeline
+
+The Kickstarter Implementation Timeline will be broken into four phases: Pre-Model Creation, Model Creation, Training Model, and Implementing Model.
+
+  1. Pre-Model Creation: This stage will take approximately 200 hours of 3D Solutions data scientists' time
+  2. Model Creation: This stage will take approximately 100 hours of 3D Solutions data scientists' time
+  3. Training Model: This stage will take approximately 100 hours of 3D Solutions data scientists' time
+  4. Implementing Model: This stage will take approximately 100 hours of 3D Solutions data scientists' time
+  
+Total hours of work = 500 hours of 3D Solutions data scientist's time
+The 3D Solutions data scientists can commit 40 hours total to this project each week.
+
+Total project time = 12.5 weeks or approximately 3 months
+
+#### <a id ="cost"></a>Project Cost
+
+Our data scientists at 3D Solutions cost 100 US dollars per hour of work. The total cost for the Kickstarter Implementation Project will be 50,000 US dollars. This cost does not include any unforseen issues that the 3D Solutions data scientists will spend extra time on. 
+
+## <a id ="communication_plan"></a>Communication Plan
+
+Open communication between the 3D Solutions team and the AIU team will ensure that the project runs smoothly. The 3D Solutions data scientists will provide a weekly project report to the AIU team via email. This weekly project report will include the following updates:
+
+  1. Number of hours the 3D Solutions data scientists spent on the project that week
+  2. Updates and progress made on the project that week
+  3. Provide status relative to project timeline. This status will update the AIU team about whether the project is on time or at risk
+  4. A plan for the work that will be completed the following week
+
+If AIU needs to reach out to the 3D Solution's data scientists outside of the weekly project update, the 3D Solutions data scientists will be able to field any questions via email or phone. 
+
+## <a id ="project_results"></a>Project Results
+
+The model that 3D Solutions data scientists create will ultimately predict how much money a Kickstarter project or idea will generate over a time period of one year. This prediction will be based on how much money the public has put into the project and how many contributors invested in the Kickstarter project. The model will also determine whether AIU should reach out to the company to create an investment relationship with them. 
+
+
+#### <a id="success_metric"></a>Success Metric
+
+Since AIU wants a 10% increase in their investment portfolio of 10 million dollars, the return on investment to achieve that goal should be 1 million dollars in the span of a year. 
+
+The model that 3D Solutions will create and implement will give AIU the knowledge to reach out to companies that have great public interest through Kickstarter. AIU can use the model to determine which companies they want to add to their portfolio investment. 
+
+A few good investments through the implementation of this model will help AIU reach their success metric of 1 million dollars increase in their investment portfolio. 
+
+
+## <a id="potential_risks"></a>Potential Risks
+
+This section will go into detail about the potential risks that can affect the success of a project. Potential risks may be discovered as the 3D Solutions data scientists meet with the AIU team. Documentation of those risks should be added to this plan as the project progresses. 
+
+#### <a id ="major"></a>Major Risks
+
+No major risks are determined at this time. 
+
+#### <a id ="minor"></a>Minor Risks
+
+A potential minor risk is that not all the Kickstarter companies that are identified as a good investment candidates for AIU will be interested in creating an investment partnership. 
+
+
+#### <a id ="mitigation"></a>Mitigation Plan
+
+To ensure that investment partnerships can be created with AIU and Kickstarter companies that are identified as good investment candidates, we encourage AIU to reach out to the companies that they truly find interest in. Companies are more likely to create partnerships with investors that are interested in their product. The model created by 3D Solutions data scientists will provide the AIU team with all the tools to make informed decisions about which companies are worth approaching for investment opportunities. 
+
+
+## <a id="post_implementation"></a>Post Implementation
+
+After the 3D Solutions data scientists have created the prediction model, it will still need to undergo maintenance to ensure that the model will continue to provide relevant and accurate predictions. 
+
+#### <a id="model_maintenance"></a>Model Maintenance
+
+The model should be re-trained every two months to ensure that it is working with new data. The 3D Solutions team will work with the AIU technical team during the Implementing Model phase of the project to provide necessary training to maintain the model and ensure it works within the AIU systems. 
+
+#### <a id="revisit"></a>Revisiting the Model
+
+We recommend that the model should be re-visited "at minimum" once a year to ensure it is still providing good data. 
+
+## <a id="acknowledgements"></a>Acknowledgements
+
+We would like to thank the AIU team for this opportunity. We look forward to helping AIU achieve its financial goals. 
