@@ -1,6 +1,6 @@
 #Preprocessing script and addition of columns
 
-#Re-name datasets
+#Re-name dataset
 ks <- ks.projects.201801 
 
 #Add percent funded column to dataset
@@ -34,4 +34,12 @@ for(j in 1:length(ks$ID)) {
     print(j)
   }
 }
+
+#Save dataframe as ks.final so you do not have to re-load when you open R
+write.csv(ks, file = "C:/Users/hashemin/csx415-project/KickstarterProject/data/ks.final.csv")
+ks_final <- read_csv("data/ks.final.csv")
+
+
+
+
 
