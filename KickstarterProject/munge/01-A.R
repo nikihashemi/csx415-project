@@ -23,21 +23,14 @@ for(k in 1:length(ks$ID)) {
   }
 }
 
-ks$failed <- NA
-for(j in 1:length(ks$ID)) {
-  if(ks$state[j] != "success") {
-    ks$failed[j] = 1
-    print(j)
-  }
-  else {
-    ks$failed[j] = 0
-    print(j)
-  }
-}
+
 
 #Save dataframe as ks.final so you do not have to re-load when you open R
 write.csv(ks, file = "C:/Users/hashemin/csx415-project/KickstarterProject/data/ks.final.csv")
 ks_final <- read_csv("data/ks.final.csv")
+
+ks_final$state[ks_final$state != "successful"] <- "failed"
+
 
 
 
