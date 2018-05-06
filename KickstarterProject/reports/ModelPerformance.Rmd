@@ -5,18 +5,18 @@ output: html_document
 ## Model Performance
 #### Model performance will be measured by using Root Mean Squared Error (RMSE).
 
-### Part 1: Predict Kickstarter Project Will Fail 
+### Part 1: Predict Kickstarter Project will be at least 20% funded
 
 ```{r echo=FALSE}
-dat <- matrix(c("Naive Model", "0.4802372"), ncol = 2, byrow = TRUE)
+dat <- matrix(c("Naive Model", "0.7873949"), ncol = 2, byrow = TRUE)
 colnames(dat) <- c("Model","RMSE Value")
 knitr::kable(dat)
 ```
 
-### Part 2: Predict Kickstarter Project Will be at least 20% Funded
+### Part 2: Given the project is 20% funded, predict Kickstarter Project Will fail
 
 ```{r echo=FALSE}
-dat <- matrix(c("Naive Model", "1.918470"), ncol = 2, byrow = TRUE)
+dat <- matrix(c("Naive Model", "1.458620"), ncol = 2, byrow = TRUE)
 colnames(dat) <- c("Model","RMSE Value")
 knitr::kable(dat)
 ```

@@ -1,0 +1,82 @@
+---
+title: "Kickstarter Project Proposal"
+author: "Niki Hashemi - Kickstarter Lead Data Scientist"
+output: html_document
+---
+
+## Project Goals
+
+The goal of this project is to increase the number of Kickstarter Projects that are successfully funded by sending users a weekly newsletter called "Help These 10 Projects Meet Their Funding Goal". This newsletter will contain 10 Kickstarter Projects that are predicted to fall short of their goal amount. This goal will be achieved using the following two steps: 
+    
+  1. Predict which projects will meet at least 20% of their funding goal
+  2. Out of those projects, predict which Kickstarter projects will fail
+  
+Currently, 36.10% of Kickstarter Projects are successful, meaning the project reached or exceeded its funding goal. By sending the weekly newsletter, our goal is to increase the number of successful Kickstarter projects to 40% by encouraging users to fund projects that are predicted to slightly miss their funding goal.  
+
+## Background
+
+The Kickstarter executive team requested the expertise of the Kickstarter data science team to help the company increase the percentage of successful Kickstarter projects to 40%. Kickstarter earns 5% of the total funded amount for a successful Kickstarter project. The company earns no money for a project that does not meet its funding goal, even if the project just misses its funding amount by a few percentage points. 
+
+Based on current Kickstarter stats, it is known that most successfully funded projects raise less than $10,000 on Kickstarter. We also know that 14% of projects never receive a single pledge. However, the most useful bit of information relevant to this project is that 78% of projects that raised more than 20% of their goal were successfully funded. Which is why, we are going to focus on predicting which projects will raise at least 20% of their funding goal but are predicted to fail. This project will be considered successful if the percentage of successful Kickstarter projects increases from 36.10% to 40% by the end of Q4. 
+
+
+## Project Details
+
+In this section, we will go into detail about the proposed project plan, timeline and costs. 
+
+#### Project Plan
+
+The Kickstarter Implementation Project Plan will be broken into four phases: Pre-Model Creation, Model Creation, Training Model, and Deploying Model. 
+
+  1. Pre-Model Creation: The Kickstarter data scientists will meet with the Kickstarter executive team, board members and technical/data management teams to view, in more detail, the company's earnings statements. This step is essential because this information will give the data scientists a good background to better understand the current state of the company. During this stage, the Kickstarter data scientists will work with the team to better understand current data platform capabilities. Open communication and trust during the Pre-Model Creation phase is essential to ensure that the data science team has enough background information to help increase the number of successfully funded Kickstarter projects. 
+  
+  2. Model Creation: During this stage, the Kickstarter data scientists will collect data from over 300,000 Kickstarter projects and begin construction on a model that will be able to achieve the two goals listed in the "Project Goals" section above.
+  
+  3. Training Model: Next, the data scientists will train and test various models and determine the "best" one.
+  
+  4. Deploying Model: During this last stage, the Kickstarter data scientists will be able to run the model on new data to determine a list of 10 projects that will be featured in a weekly newsletter to site users. 
+
+#### Project Timeline
+
+The Kickstarter Implementation Timeline will be broken into four phases: Pre-Model Creation, Model Creation, Training Model, and Deploying Model.
+
+  1. Pre-Model Creation: This stage will take approximately 200 hours of data scientists' time
+  2. Model Creation: This stage will take approximately 100 hours of data scientists' time
+  3. Training Model: This stage will take approximately 100 hours of data scientists' time
+  4. Deploying Model: This stage will take approximately 100 hours of data scientists' time
+  
+Total hours of work = 500 hours of Kickstarter data scientist's time
+The data scientists can commit 40 hours total to this project each week.
+
+Total project time = 12.5 weeks or approximately 3 months
+
+#### Project Cost
+
+Our data scientists that will focus on this project will cost 100 US dollars per hour of work. The total cost for the project will be 50,000 US dollars. This cost does not include any unforseen issues that the data scientists may spend more time resolving. 
+
+## Communication Plan
+
+Open communication between the data science team and the Kickstarter executive team, board members and technical/data management teams will ensure that the project runs smoothly. The Kickstarter data scientists will provide a weekly project report to the rest of the team via email. This weekly project report will include the following updates:
+
+  1. Number of hours the data scientists spent on the project that week
+  2. Updates and progress made on the project that week
+  3. Provide status relative to project timeline. This status will update the AIU team about whether the project is on time or at risk
+  4. A plan for the work that will be completed the following week
+
+If any one needs to reach out to the data scientists outside of the weekly project update, they will be able to field any questions via email or phone. 
+
+## Model and Project Success Metrics
+
+This project will result in two models. The first model will predict which projects are predicted to reach at least 20% of their funding goal. The second model will then predict which one of those projects that reached 20% of their funding goal will fail. The success of both models will be determined by calculating the root mean standard error (RMSE).
+
+As stated above, this project will be considered successful if the percentage of successful projects increases from 36.10% to 40%. 
+
+## Potential Risks and Mitigation Plan
+
+
+
+
+## Deployment of Model and Model Maintenance
+
+
+

@@ -1,0 +1,38 @@
+---
+title: "Kickstarter Project Performance"
+author: "Niki Hashemi"
+date: "April 21, 2018"
+output: html_document
+---
+
+## 15-April-2018 Update
+
+I have performed some data cleaning and run some preliminary exploratory data analysis on the Kickstarter data set.
+In my initial analysis, I created some bar graphs to get a better sense of the data. These graphs can be found in the graphs folder in the KickstarterProject folder. 
+
+I also ran an initial model to test my dataset. The model is a simple linear regression model. The outcome variable (y) is the amount of money that was pledged in the kickstarter campaign. The dependent variables (x) that I used in the preliminary model was the number of backers that contributed to the Kickstarter campaigns.
+
+log(Pledged) = intercept + log(backers)*(x)
+
+Naive linear regression model: log(pledged amount) = 1.92 + 1.526*log(backers)
+
+The p-value was < 0.01 which means that the number of backers has a significant affect on the total pledge amount.  
+
+Next steps: Divide the data into a training (2016 dataset) and test (2018 dataset) datasets to put the model to the test. The goal for this project is to be able to closely predict the amount of money that will be pledged to the product during the Kickstarter campaign based on various dependent variables in the dataset. 
+
+
+## 21-April-2018 Update
+
+List of tests to evaluate the performance of the naive model: log(pledged amount) = 1.92 + 1.526*log(backers)
+
+    * R-Squared: 0.824
+    * Adj R-Squared: 0.824
+    * AIC: 1133712
+    * BIC: 1133744
+    * Min-Max Accuracy: 70.91%
+    * Correlation between backers and pledged: 90.77%
+
+Evaluation: Based on the information above, we can tell that pledged amount and number of backers is highly correlated (90.77%). The R-Squared and Adjusted R-Squared values are also high (0.824) meaning that the proportion of variation for pledged amount is highly explained by the number of backers. The AIC (Akaike's Information Criterion) and BIC (Bayesian Information Criterion) are measures of the goodness of fit for the model. AIC and BIC will be a good measure when comparing models. The lower AIC and BIC scores will determine a model that fits the data better. A min_max accuracy of 70.91% indicates that the actual and predicted values for pledged amount have similar directional movement. 
+
+
+
