@@ -1,0 +1,22 @@
+---
+output: html_document
+---
+
+## Model Performance
+#### Model performance will be measured by using Root Mean Squared Error (RMSE).
+
+### Part 1: Predict Kickstarter Project Will Fail 
+
+```{r echo=FALSE}
+dat <- matrix(c("Naive Model", "0.4802372"), ncol = 2, byrow = TRUE)
+colnames(dat) <- c("Model","RMSE Value")
+knitr::kable(dat)
+```
+
+### Part 2: Predict Kickstarter Project Will be at least 20% Funded
+
+```{r echo=FALSE}
+dat <- matrix(c("Naive Model", "1.918470"), ncol = 2, byrow = TRUE)
+colnames(dat) <- c("Model","RMSE Value")
+knitr::kable(dat)
+```
