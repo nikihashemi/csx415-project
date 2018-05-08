@@ -8,7 +8,7 @@ output: html_document
 ### Part 1: Predict Kickstarter Project will be at least 20% funded
 
 ```{r echo=FALSE}
-dat <- matrix(c("Naive Model", "0.7873949"), ncol = 2, byrow = TRUE)
+dat <- matrix(c("Naive Model", "0.7873949", "Gradient Boosting Method", "0.2069203"), ncol = 2, byrow = TRUE)
 colnames(dat) <- c("Model","RMSE Value")
 knitr::kable(dat)
 ```
@@ -16,7 +16,7 @@ knitr::kable(dat)
 ### Part 2: Given the project is 20% funded, predict Kickstarter Project Will fail
 
 ```{r echo=FALSE}
-dat <- matrix(c("Naive Model", "1.458620"), ncol = 2, byrow = TRUE)
+dat <- matrix(c("Naive Model", "1.458620", "Gradient Boosting Method", "0.3215790"), ncol = 2, byrow = TRUE)
 colnames(dat) <- c("Model","RMSE Value")
 knitr::kable(dat)
 ```

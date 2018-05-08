@@ -20,4 +20,7 @@ ks_final <- read.csv('ks.final.csv')
 library('ProjectTemplate')
 library('tidyverse')
 library('caret')
+library('gbm')
+library('devtools')
 library('testthat')
+
