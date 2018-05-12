@@ -1,13 +1,16 @@
-#Update train and test datasets to only include successful/failed projects so output is easier to read
-train <- train[ which(train$state == 'successful' | train$state == 'failed' ), ]
-test <- test[which(test$state == 'successful' | test$state == 'failed'), ]
+library('rpart')
+library('rattle')
 
-#Classification Tree
-class.tree.result <- rpart(state ~ year + main_category + backers + pledged + goal, data = train, method = "class")
-fancyRpartPlot(class.tree.result, cex = 0.5)
-printcp(class.tree.result)
+#Part 1: Classification Tree to predict over20
+class.tree.result1 <- rpart(over20 ~ main_category + usd_goal_real + backers + country + state.failed, data = train1, method = "class")
+png(file = 'C:/Users/hashemin/csx415-project/KickstarterProject/graphs/train1_classtree.png')
+fancyRpartPlot(class.tree.result1, cex = 0.5)
+dev.off()
+printcp(class.tree.result1)
 
-#Regression Tree
-reg.tree.result <- rpart(pledged ~ year + main_category + backers + pledged + goal + state, data = train, method = "anova")
-fancyRpartPlot(reg.tree.result, cex = 0.6)
-printcp(reg.tree.result)
+#Part 2: Classification Tree
+class.tree.result2 <- rpart(state.failed ~ main_category + usd_goal_real + backers + country, data = train2, method = "class")
+png(file = 'C:/Users/hashemin/csx415-project/KickstarterProject/graphs/train2_classtree.png')
+fancyRpartPlot(class.tree.result2, cex = 0.5)
+dev.off()
+printcp(class.tree.result2)
