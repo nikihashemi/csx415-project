@@ -1,5 +1,7 @@
 #Gradient Bootstrap Model
 #Part 1: Predict if project will be over 20 percent funded
+caret::trainControl()
+
 fitControl <- trainControl(method = "repeatedcv", number = 5, repeats = 5)
 set.seed(825)
 gbmFit1 <- train(over20 ~ main_category + usd_goal_real + backers + country + state.failed, 
