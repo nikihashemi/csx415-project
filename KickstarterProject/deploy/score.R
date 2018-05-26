@@ -1,4 +1,5 @@
 #Scoring model
+ks_test <- read.csv('ks.test.csv')
 b <- predict(gbm.fit, ks_test)
 r <- which(b >= 0.80 & b < 0.99)
 
