@@ -6,18 +6,13 @@ output: html_document
 
 ## Project Goals
 
-The goal of this project is to increase the number of Kickstarter Projects that are successfully funded by sending users a weekly newsletter called "Help These 10 Projects Meet Their Funding Goal". This newsletter will contain 10 Kickstarter Projects that are predicted to fall short of their goal amount. This goal will be achieved using the following two steps: 
-    
-  1. Predict which projects will meet at least 20% of their funding goal
-  2. Out of those projects, predict which Kickstarter projects will fail
+The goal of this project is to increase the number of Kickstarter Projects that are successfully funded by sending users a weekly newsletter called "Help These 10 Projects Meet Their Funding Goal". This newsletter will contain 10 Kickstarter Projects that are predicted to raise 90 - 99 percent of its funding goal.
   
-Currently, 36.10% of Kickstarter Projects are successful, meaning the project reached or exceeded its funding goal. By sending the weekly newsletter, our goal is to increase the number of successful Kickstarter projects to 40% by encouraging users to fund projects that are predicted to slightly miss their funding goal.  
+Currently, 36.10% of Kickstarter Projects are successful, meaning the project reached or exceeded its funding goal. By sending the weekly newsletter, our goal is to increase the number of successful Kickstarter projects to 40% by encouraging users to fund projects that are predicted to raise 90 - 99 percent of its funding goal. 
 
 ## Background
 
-The Kickstarter executive team requested the expertise of the Kickstarter data science team to help the company increase the percentage of successful Kickstarter projects to 40%. Kickstarter earns 5% of the total funded amount for a successful Kickstarter project. The company earns no money for a project that does not meet its funding goal, even if the project just misses its funding amount by a few percentage points. 
-
-Based on current Kickstarter stats, it is known that most successfully funded projects raise less than $10,000 on Kickstarter. We also know that 14% of projects never receive a single pledge. However, the most useful bit of information relevant to this project is that 78% of projects that raised more than 20% of their goal were successfully funded. Which is why, we are going to focus on predicting which projects will raise at least 20% of their funding goal but are predicted to fail. This project will be considered successful if the percentage of successful Kickstarter projects increases from 36.10% to 40% by the end of Q4. 
+The Kickstarter executive team requested the expertise of the Kickstarter data science team to help the company increase the percentage of successful Kickstarter projects to 40%. Kickstarter earns 5% of the total funded amount for a successful Kickstarter project. The company earns no money for a project that does not meet its funding goal, even if the project just misses its funding amount by a few percentage points. By encouraging users to fund projects that are predicted to slightly miss their funding goal, more projects will exceed their funding goal and Kickstarter will raise more money. 
 
 
 ## Project Details
@@ -67,7 +62,7 @@ If any one needs to reach out to the data scientists outside of the weekly proje
 
 ## Model and Project Success Metrics
 
-This project will result in two models. The first model will predict which projects are predicted to reach at least 20% of their funding goal. The second model will then predict which one of those projects that reached 20% of their funding goal will fail. The success of both models will be determined by calculating the root mean standard error (RMSE).
+This project will result in a model that will predict the percentage of funding that a Kickstarter project will meet. The success of the model will be determined by calculating the root mean standard error (RMSE).
 
 As stated above, this project will be considered successful if the percentage of successful projects increases from 36.10% to 40%. 
 
@@ -77,6 +72,4 @@ As stated above, this project will be considered successful if the percentage of
 
 
 ## Deployment of Model and Model Maintenance
-
-
 

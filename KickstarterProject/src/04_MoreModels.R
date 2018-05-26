@@ -1,18 +1,15 @@
-#More advanced model training
-#Part 1
+#Gradient Boosting Model
 fitControl <- trainControl(method = "repeatedcv", number = 5, repeats = 5)
 set.seed(825)
-gbmFit1 <- train(over20 ~ main_category + usd_goal_real + backers + country + state.failed, 
-                 data = train1, method = "gbm", trControl = fitControl, verbose = TRUE)
-gbmFit1
-advanced.predict1 <- predict(gbmFit1, test1)
-postResample(pred = advanced.predict1, obs = test1$over20)
+gbm.form <- percent.funded ~ backers + over20 + state.failed
+gbm.fit <- train(gbm.form, data = ks_train, trControl = fitControl, method = "gbm")
 
-#Part 2
-fitControl <- trainControl(method = "repeatedcv", number = 5, repeats = 5)
-set.seed(825)
-gbmFit2 <- train(state.failed ~ main_category + usd_goal_real + backers + country, 
-                 data = train2, method = "gbm", trControl = fitControl, verbose = TRUE)
-gbmFit2
-advanced.predict2 <- predict(gbmFit2, test2)
-postResample(pred = advanced.predict2, obs = test2$state.failed)
+gbm.predict <- predict(fit, ks_test)
+postResample(pred = gbm.predict, obs = ks_test$percent.funded)
+
+#Write model package
+pkg <- "pkgs/model"
+if( ! dir.exists(pkg) ) devtools::create(pkg)
+
+devtools::use_data(gbm.fit, pkg = pkg, overwrite = TRUE )
+
