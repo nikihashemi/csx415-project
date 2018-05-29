@@ -7,13 +7,20 @@ Purpose: The purpose of this project is to predict which Kickstarter Projects wi
 
 Note: This project uses the Project Template format
 
+Note: Packages needed to run score script (Packrat was not working)
+
+    * ProjectTemplate
+    * tidyverse
+    * caret
+
 Please use the following instructions to properly load and run this project:
 
     1. Read the Project Proposal in the "reports" to get a better understanding of the purpose of this project
-    2. Set working directory to the KickstarterProject file
+    2. Set working directory to the KickstarterProject folder
     3. Ensure that ProjectTemplate is installed, then run: load.project()
-    4. Unbundle packrat
-    3. Load gbm.fit.rda from "pkgs/model/data"
-    4. Ensure the working directory is set to "KickstarterProject/data" folder
-    5. Run score.R script located in "pkgs/model/R" folder
-    6. The output will be a data frame with names of Kickstarter Projects that are predicted to be 80 - 99 percent funded
+    4. Load gbm.fit.rda from "pkgs/model/data"
+    5. Ensure the working directory is set to "KickstarterProject/data" folder
+    6. Run score.R script located in "deploy" folder
+    7. The output will be a data frame with names of Kickstarter Projects that are predicted to be 80 - 99 percent funded
+
+
