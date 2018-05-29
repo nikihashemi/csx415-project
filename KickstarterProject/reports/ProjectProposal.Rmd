@@ -8,7 +8,7 @@ output: html_document
 
 The goal of this project is to increase the number of Kickstarter Projects that are successfully funded by sending users a weekly newsletter called "Help These 10 Projects Meet Their Funding Goal". This newsletter will contain 10 Kickstarter Projects that are predicted to raise 90 - 99 percent of its funding goal.
   
-Currently, 36.10% of Kickstarter Projects are successful, meaning the project reached or exceeded its funding goal. By sending the weekly newsletter, our goal is to increase the number of successful Kickstarter projects to 40% by encouraging users to fund projects that are predicted to raise 90 - 99 percent of its funding goal. 
+Currently, 36.10% of Kickstarter Projects are successful, meaning the project reached or exceeded its funding goal. By sending the weekly newsletter, our goal is to increase the number of successful Kickstarter projects to 40% by encouraging users to fund projects that are predicted to raise 80 - 99 percent of its funding goal. 
 
 ## Background
 
@@ -66,10 +66,18 @@ This project will result in a model that will predict the percentage of funding 
 
 As stated above, this project will be considered successful if the percentage of successful projects increases from 36.10% to 40%. 
 
-## Potential Risks and Mitigation Plan
+## Potential Risks
+
+Some of the potential risks for this project include:
+
+    * Due to the size of the Kickstarter dataset, re-training the model would be time consuming
+    * Unwillingness for the Kickstarter team to send weekly newsletters to users
+    * A steady drop in number of users due to new weekly newsletters - some users may consider these newsletters as spam
+    * No change or increase in the number of fully funded Kickstarter Projects
+    * Desire for the Kickstarter team to continue promoting already fully funded projects, rather than pushing for more projects to pass the funding threshold 
 
 
+## Deployment of Model
 
-
-## Deployment of Model and Model Maintenance
+In the current state of this project proposal, the model deployment will remain in R. The project will result in a table with project names that are predicted to be 80 to 99 percent funded. 
 
