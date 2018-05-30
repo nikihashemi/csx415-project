@@ -1,5 +1,5 @@
 #Scoring model
-#setwd('C:/Users/hashemin/csx415-project/KickstarterProject/data')
+#Set working directory to Kickstarter/data
 newdata <- read.csv('ks.train.csv')
 b <- predict(gbm.fit, newdata)
 r <- which(b >= 0.80 & b < 0.99) #finds indecies where percentage is between 80 and 99
