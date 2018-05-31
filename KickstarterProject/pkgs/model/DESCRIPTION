@@ -1,9 +1,10 @@
 Package: model
-Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
+Title: This package runs a gradient boosting model on the Kickstarter dataset
+Version: 0.0.1.0
+Date: 29-May-2018
+Authors@R: person("Niki", "Hashemi", email = "nhashemi3@gmail.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 Depends: R (>= 3.4.4)
-License: What license is it under?
+License: N/A
 Encoding: UTF-8
 LazyData: true
